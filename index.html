@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>גזלייט — מהתעללות רגשית לבאזוורד</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;500;700;800;900&family=Rubik:wght@400;500;700;800;900&family=Frank+Ruhl+Libre:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="deck.css">
+<style>deck-stage:not(:defined){visibility:hidden}</style>
+<template id="__bundler_thumbnail" data-bg-color="#1a0e4d">
+  <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="800" fill="#1a0e4d"/>
+    <text x="400" y="440" font-family="Arial, sans-serif" font-weight="900" font-size="220" fill="#e3b9ed" text-anchor="middle">ג</text>
+  </svg>
+</template>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+</deck-stage>
+
+  <script src="slides/01-01----.js"></script>
+  <script src="slides/02-02-----------.js"></script>
+  <script src="slides/03-03-----------.js"></script>
+  <script src="slides/05-05-----------.js"></script>
+  <script src="slides/06-05b------.js"></script>
+  <script src="slides/07-07-----.js"></script>
+  <script src="slides/08-08------.js"></script>
+  <script src="slides/09-09------.js"></script>
+  <script src="slides/10-11----------.js"></script>
+  <script src="slides/12-13--------------.js"></script>
+  <script src="slides/alt2-11b-relationships.js"></script>
+  <script src="slides/15-16---------.js"></script>
+  <script src="slides/19-21---------------.js"></script>
+  <script src="slides/20-22-------2016.js"></script>
+  <script src="slides/21-23--------2020.js"></script>
+  <script src="slides/22-24----------.js"></script>
+  <script src="slides/alt3-17-buzzword.js"></script>
+  <script src="slides/36-36-----.js"></script>
+  <script src="slides/38-38-----------.js"></script>
+  <script src="slides/alt3-film-rings.js"></script>
+  <script src="slides/37-37-------------.js"></script>
+  <script src="slides/39-39--------.js"></script>
+
+<script>
+/* Inject all registered slides into deck-stage */
+(function () {
+  var stage = document.querySelector('deck-stage');
+  (window.__slides || []).forEach(function (slideHtml) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = slideHtml;
+    while (tmp.firstElementChild) stage.appendChild(tmp.firstElementChild);
+  });
+  var secs = stage.querySelectorAll(':scope > section');
+  secs.forEach(function (s, i) {
+    var n = s.querySelector('.slide-num');
+    if (!n) n = Array.prototype.find.call(s.querySelectorAll('*'), function (el) { return !el.children.length && /^\s*\d+\s*\/\s*\d+\s*$/.test(el.textContent); });
+    if (n) { n.textContent = (i + 1) + ' / ' + secs.length; if (parseFloat(getComputedStyle(n).fontSize) < 24) n.style.fontSize = '24px'; }
+  });
+})();
+</script>
+
+
+<script src="deck-stage.js"></script>
+<script src="image-slot.js"></script>
+<script src="fragments.js"></script>
+
+</body>
+</html>
